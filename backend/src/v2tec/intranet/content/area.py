@@ -47,8 +47,11 @@ class IArea(model.Schema):
     cidade = schema.TextLine(
         title=_("Cidade"), description=_("Informe a cidade"), required=False
     )
-    estado = schema.TextLine(
-        title=_("Estado"), description=_("Informe o estado"), required=False
+    estado = schema.Choice(
+        title=_("Estado"),
+        description=_("Informe o estado"),
+        required=False,
+        vocabulary="v2tec.intranet.vocabulary.estados",
     )
     cep = schema.TextLine(
         title=_("CEP"), description=_("Informe o CEP"), required=False

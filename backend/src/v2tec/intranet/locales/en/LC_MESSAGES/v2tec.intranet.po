@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-05-28 16:55+0000\n"
+"POT-Creation-Date: 2026-06-01 20:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,18 +14,190 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: v2tec.intranet\n"
 
-#: v2tec/intranet/profiles.zcml:22
+#: v2tec/intranet/vocabularies/estados.py:10
+msgid "Acre"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:11
+msgid "Alagoas"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:12
+msgid "Amapá"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:13
+msgid "Amazonas"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:14
+msgid "Bahia"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:57
+msgid "CEP"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:15
+msgid "Ceará"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:48
+msgid "Cidade"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:43
+msgid "Complemento"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:15
+msgid "Contato"
+msgstr ""
+
+#: v2tec/intranet/profiles.zcml:23
 msgid "Create example content to showcase the new website"
 msgstr ""
 
-#: v2tec/intranet/profiles.zcml:22
+#: v2tec/intranet/vocabularies/estados.py:16
+msgid "Distrito Federal"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:22
+msgid "Email"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:36
+msgid "Endereço"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:17
+msgid "Espírito Santo"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:51
+msgid "Estado"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:18
+msgid "Goiás"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:48
+msgid "Informe a cidade"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:57
+msgid "Informe o CEP"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:44
+msgid "Informe o complemento do endereço"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:40
+msgid "Informe o endereço"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:52
+msgid "Informe o estado"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:29
+msgid "Informe o telefone de contato"
+msgstr ""
+
+#: v2tec/intranet/profiles.zcml:23
 msgid "Intranet V2Tec: Example content"
 msgstr ""
 
-#: v2tec/intranet/profiles.zcml:13
+#: v2tec/intranet/profiles.zcml:14
 msgid "Intranet V2Tec: Install"
 msgstr ""
 
-#: v2tec/intranet/profiles.zcml:13
+#: v2tec/intranet/vocabularies/estados.py:19
+msgid "Maranhão"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:20
+msgid "Mato Grosso"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:21
+msgid "Mato Grosso do Sul"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:22
+msgid "Minas Gerais"
+msgstr ""
+
+#: v2tec/intranet/profiles.zcml:14
 msgid "Package to configure a new Intranet V2Tec site"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:25
+msgid "Paraná"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:24
+msgid "Paraíba"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:23
+msgid "Pará"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:26
+msgid "Pernambuco"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:27
+msgid "Piauí"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:29
+msgid "Rio Grande do Norte"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:30
+msgid "Rio Grande do Sul"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:28
+msgid "Rio de Janeiro"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:31
+msgid "Rondônia"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:32
+msgid "Roraima"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:33
+msgid "Santa Catarina"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:35
+msgid "Sergipe"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:34
+msgid "São Paulo"
+msgstr ""
+
+#: v2tec/intranet/content/area.py:28
+msgid "Telefone"
+msgstr ""
+
+#: v2tec/intranet/vocabularies/estados.py:36
+msgid "Tocantins"
+msgstr ""
+
+#: v2tec/intranet/profiles/default/types/Area.xml
+msgid "Uma Área dentro da V2Tec"
+msgstr ""
+
+#: v2tec/intranet/profiles/default/types/Area.xml
+msgid "Área"
 msgstr ""

@@ -25,6 +25,11 @@ const PessoaView: React.FC<PessoaViewProps> = (props) => {
           responsive={true}
         />
       )}
+      {content.categoria && (
+        <span className={`categoria categoria-${content.categoria.token}`}>
+          {content.categoria.title}
+        </span>
+      )}
       <h1 className="documentFirstHeading">{content.title}</h1>
       {content.description && (
         <p className="documentDescription">{content.description}</p>

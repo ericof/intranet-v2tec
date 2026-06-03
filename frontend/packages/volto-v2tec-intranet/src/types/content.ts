@@ -18,6 +18,10 @@ export interface Area extends Content {
 export interface Pessoa extends Content {
   title: string;
   description: string;
+  categoria?: {
+    token: string;
+    title: string;
+  };
   telefone?: string;
   email: string;
   endereco?: string;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from '@plone/volto/components/theme/Image/Image';
+import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import { Container } from '@plone/components';
 import ContactInfo from 'volto-v2tec-intranet/components/ContactInfo/ContactInfo';
 import EnderecoInfo from 'volto-v2tec-intranet/components/EnderecoInfo/EnderecoInfo';
@@ -33,6 +34,13 @@ const PessoaView: React.FC<PessoaViewProps> = (props) => {
       <h1 className="documentFirstHeading">{content.title}</h1>
       {content.description && (
         <p className="documentDescription">{content.description}</p>
+      )}
+      {content.area && (
+        <Container narrow className="area-container">
+          <UniversalLink className={'area'} item={content.area}>
+            {content.area.title}
+          </UniversalLink>
+        </Container>
       )}
       <ContactInfo content={content} />
       <EnderecoInfo content={content} />

@@ -1,6 +1,8 @@
+from plone.autoform import directives
 from plone.dexterity.content import Container
 from plone.supermodel import model
 from v2tec.intranet import _
+from z3c.relationfield.schema import RelationChoice
 from zope import schema
 from zope.interface import implementer
 
@@ -13,6 +15,11 @@ class IPessoa(model.Schema):
         vocabulary="v2tec.intranet.vocabulary.categorias",
         required=False,
     )
+
+    area = RelationChoice(
+        title=_("Área"), source="v2tec.intranet.vocabulary.areas", required=False
+    )
+    directives.widget("area", frontendOptions={"widget": "select"})
 
 
 @implementer(IPessoa)

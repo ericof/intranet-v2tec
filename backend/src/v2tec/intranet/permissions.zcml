@@ -10,6 +10,10 @@
         id="v2tec.intranet.area.add"
         title="v2tec.intranet: Add Area"
         />
+    <permission
+        id="v2tec.intranet.pessoa.add"
+        title="v2tec.intranet: Add Pessoa"
+        />
 
   </configure>
 

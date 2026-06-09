@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentrules>
+ <rule name="rule-1" title="Mover imagens para pasta de Imagens"
+    cascading="False" description="" enabled="True"
+    event="zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    stop-after="False">
+  <conditions>
+   <condition type="plone.conditions.PortalType">
+    <property name="check_types">
+     <element>Image</element>
+    </property>
+   </condition>
+  </conditions>
+  <actions>
+   <action type="plone.actions.Move">
+    <property name="target_folder">/images</property>
+   </action>
+   <action type="plone.actions.Logger">
+    <property name="targetLogger">Intranet V2Tec</property>
+    <property name="loggingLevel">20</property>
+    <property name="message">&amp;c - &amp;u</property>
+   </action>
+   <action type="plone.actions.Mail">
+    <property
+       name="subject">Nova imagem adicionada ao site por ${creator_fullname}</property>
+    <property name="source">site@v2solucoes.com.br</property>
+    <property name="recipients">${editor_emails}</property>
+    <property name="exclude_actor">True</property>
+    <property name="message">Olá, 
+     
+         ${creator_fullname} adicionou uma nova imagem à raiz do portal e essa image foi movida para a pasta /images
+     
+     Abs,
+     Site</property>
+   </action>
+  </actions>
+ </rule>
+ <rule name="rule-2" title="Mover pessoas" cascading="False"
+    description="Move novos objetos do tipo pessoa para a pasta de colaboradores"
+    enabled="True" event="zope.lifecycleevent.interfaces.IObjectAddedEvent"
+    stop-after="False">
+  <conditions>
+   <condition type="plone.conditions.PortalType">
+    <property name="check_types">
+     <element>Pessoa</element>
+    </property>
+   </condition>
+  </conditions>
+  <actions>
+   <action type="plone.actions.Move">
+    <property name="target_folder">/colaboradores</property>
+   </action>
+  </actions>
+ </rule>
+ <assignment name="rule-1" bubbles="False" enabled="True" location=""/>
+ <assignment name="rule-2" bubbles="True" enabled="True" location=""/>
+</contentrules>

@@ -2,6 +2,8 @@
   "@id": "/Plone",
   "@type": "Plone Site",
   "UID": "plone_site_root",
+  "accent_color": null,
+  "accent_foreground_color": null,
   "allow_discussion": null,
   "blocks": {
     "47c92ffe-c201-493c-97c9-a2d4e0beab69": {
@@ -45,6 +47,7 @@
     },
     "68357972-bd25-47e2-a098-c7932a923182": {
       "@type": "image",
+      "align": "center",
       "alt": "Plone Foundation Logo",
       "href": [
         {
@@ -53,6 +56,13 @@
         }
       ],
       "image_field": "image",
+      "size": "l",
+      "styles": {
+        "blockWidth:noprefix": {
+          "--block-width": "var(--narrow-container-width)"
+        }
+      },
+      "theme": "default",
       "url": "resolveuid/a58ccead718140c1baa98d43595fc3e6"
     },
     "ae41d44d-c4b1-426c-acf6-2e28cb9a97a0": {
@@ -237,31 +247,95 @@
       "68357972-bd25-47e2-a098-c7932a923182"
     ]
   },
+  "complementary_logo": null,
   "contributors": [],
   "creators": [
     "admin"
   ],
-  "description": "",
+  "description": "Boas vindas a nossa intranet",
   "effective": null,
   "exclude_from_nav": false,
   "expires": null,
   "exportimport.constrains": {},
   "exportimport.conversation": [],
-  "exportimport.versions": {},
+  "facebook_app_id": "",
+  "facebook_username": "",
+  "footer_colophon_text": [
+    {
+      "children": [
+        {
+          "text": "Powered by Plone and Volto Light Theme\nThe Plone\u00ae Open Source CMS/WCM is \u00a9 2000-2026 by the "
+        },
+        {
+          "children": [
+            {
+              "text": "Plone Foundation"
+            }
+          ],
+          "data": {
+            "url": "http://plone.org"
+          },
+          "type": "link"
+        },
+        {
+          "text": " and friends.\nDistributed under the "
+        },
+        {
+          "children": [
+            {
+              "text": "GNU GPL v2 license"
+            }
+          ],
+          "data": {
+            "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html"
+          },
+          "type": "link"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "type": "p"
+    }
+  ],
+  "footer_links": [],
+  "footer_logos": [],
+  "footer_logos_container_width": "default",
+  "footer_logos_size": "s",
+  "has_fat_menu": true,
+  "has_intranet_header": false,
+  "header_actions": [],
+  "header_foreground": null,
   "id": "Plone",
+  "intranet_flag": null,
   "is_folderish": true,
   "items_total": 0,
   "language": "##DEFAULT##",
+  "layout": "document_view",
   "lock": {
     "locked": false,
     "stealable": true
   },
-  "parent": {},
-  "review_state": null,
+  "logo": {
+    "blob_path": "plone_site_root/logo/logo-simples.svg",
+    "content-type": "image/svg+xml",
+    "filename": "logo-simples.svg",
+    "height": 283,
+    "size": 29114,
+    "width": 1095
+  },
+  "preview_caption_link": null,
+  "review_state": "internal",
   "rights": "",
+  "secondary_color": null,
+  "secondary_foreground_color": null,
+  "share_social_data": true,
+  "social_links": [],
   "subjects": [],
-  "table_of_contents": null,
-  "title": "Project Title",
+  "title": "Intranet V2Tec",
   "type_title": "Plone Site",
-  "workflow_history": {}
+  "workflow_history": {},
+  "working_copy": null,
+  "working_copy_of": null,
+  "x_username": ""
 }

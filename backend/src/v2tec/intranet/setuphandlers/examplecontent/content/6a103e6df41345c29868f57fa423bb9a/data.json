@@ -1,0 +1,93 @@
+{
+  "@id": "/estrutura",
+  "@type": "Document",
+  "UID": "6a103e6df41345c29868f57fa423bb9a",
+  "allow_discussion": null,
+  "blocks": {
+    "a5e9ed61-8699-4fbd-bfbf-80221762a27a": {
+      "@type": "slate"
+    },
+    "f3152acc-e767-443f-8f67-20e9f7828024": {
+      "@type": "description"
+    },
+    "fb231f75-e6eb-4477-bdc8-c112f7fc1b3c": {
+      "@type": "listing",
+      "headlineTag": "h2",
+      "querystring": {
+        "query": [
+          {
+            "i": "path",
+            "o": "plone.app.querystring.operation.string.relativePath",
+            "v": "./"
+          },
+          {
+            "i": "portal_type",
+            "o": "plone.app.querystring.operation.selection.any",
+            "v": [
+              "Area"
+            ]
+          }
+        ],
+        "sort_on": "getObjPositionInParent",
+        "sort_order": "ascending"
+      },
+      "styles": {},
+      "theme": "grey",
+      "variation": "grid"
+    },
+    "fda0ca9e-a441-4f7d-85ab-76ebebb1328c": {
+      "@type": "title"
+    }
+  },
+  "blocks_layout": {
+    "items": [
+      "fda0ca9e-a441-4f7d-85ab-76ebebb1328c",
+      "f3152acc-e767-443f-8f67-20e9f7828024",
+      "fb231f75-e6eb-4477-bdc8-c112f7fc1b3c",
+      "a5e9ed61-8699-4fbd-bfbf-80221762a27a"
+    ]
+  },
+  "changeNote": "",
+  "contributors": [],
+  "created": "2026-06-09T20:09:32+00:00",
+  "creators": [
+    "admin"
+  ],
+  "description": "\u00c1reas de nossa empresa",
+  "effective": null,
+  "exclude_from_nav": false,
+  "expires": null,
+  "exportimport.constrains": {},
+  "exportimport.conversation": [],
+  "id": "estrutura",
+  "is_folderish": true,
+  "language": "##DEFAULT##",
+  "layout": "document_view",
+  "lock": {
+    "locked": false,
+    "stealable": true
+  },
+  "modified": "2026-06-09T20:09:32+00:00",
+  "nav_title": null,
+  "preview_caption_link": null,
+  "review_state": "internal",
+  "rights": "",
+  "subjects": [],
+  "title": "Estrutura",
+  "type_title": "Page",
+  "version": "current",
+  "versioning_enabled": true,
+  "workflow_history": {
+    "intranet_folder_workflow": [
+      {
+        "action": null,
+        "actor": "admin",
+        "comments": "",
+        "review_state": "internal",
+        "time": "2026-06-09T20:09:32+00:00"
+      }
+    ]
+  },
+  "working_copy": null,
+  "working_copy_of": null
+}

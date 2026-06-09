@@ -12,6 +12,12 @@
       handler=".area.modified"
       />
 
+  <subscriber
+      for="v2tec.intranet.content.area.IArea
+           v2tec.intranet.interfaces.IAreaDescricaoModificadaEvent"
+      handler=".area.descricao_modified"
+      />
+
   <!-- -*- Debug -*- -->
   <subscriber
       for="zope.interface.Interface"

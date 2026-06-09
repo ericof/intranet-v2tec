@@ -123,8 +123,8 @@ class TestArea:
         assert "Editor" in local_roles
 
     def test_subscriber_modified(self, area_payload):
+        from v2tec.intranet.event import AreaDescricaoModifiedEvent
         from zope.event import notify
-        from zope.lifecycleevent import ObjectModifiedEvent
 
         container = self.portal
         with api.env.adopt_roles(["Manager"]):
@@ -137,7 +137,7 @@ class TestArea:
 
         # Teste de integração, disparamos o evento de modificação
         # para que o subscriber seja executado
-        notify(ObjectModifiedEvent(area))
+        notify(AreaDescricaoModifiedEvent(area))
 
         # Descrição modificada, o subscriber deve atualizar exclude_from_nav para True
         assert area.exclude_from_nav is True

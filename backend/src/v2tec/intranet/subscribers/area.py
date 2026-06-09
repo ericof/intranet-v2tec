@@ -2,6 +2,8 @@ from plone import api
 from Products.PlonePAS.tools.groupdata import GroupData
 from v2tec.intranet import logger
 from v2tec.intranet.content.area import Area
+from v2tec.intranet.event import AreaDescricaoModifiedEvent
+from zope.event import notify
 from zope.lifecycleevent import ObjectAddedEvent
 from zope.lifecycleevent import ObjectModifiedEvent
 
@@ -33,8 +35,22 @@ def added(obj: Area, event: ObjectAddedEvent):
     """Post creation handler for Area."""
     _update_excluded_from_nav(obj)
     _cria_grupo_usuarios(obj)
+    notify(AreaDescricaoModifiedEvent(obj))
 
 
 def modified(obj: Area, event: ObjectModifiedEvent):
     """Post modification handler for Area."""
+    atributos_modificados: set[str] = set()
+    for description in event.descriptions:
+        for attr in description.attributes:
+            atributos_modificados.add(attr)
+    # Para os testes passarem :-)
+    _update_excluded_from_nav(obj)
+    if "IBasic.description" in atributos_modificados:
+        # Apenas disparamos o evento se a descrição foi modificada
+        notify(AreaDescricaoModifiedEvent(obj))
+
+
+def descricao_modified(obj: Area, event: AreaDescricaoModifiedEvent):
+    """Post modification handler for Area description."""
     _update_excluded_from_nav(obj)

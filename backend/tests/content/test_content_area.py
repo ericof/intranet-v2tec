@@ -122,6 +122,26 @@ class TestArea:
         local_roles = api.group.get_roles(group=grupo, obj=area)
         assert "Editor" in local_roles
 
+    def test_subscriber_modified(self, area_payload):
+        from zope.event import notify
+        from zope.lifecycleevent import ObjectModifiedEvent
+
+        container = self.portal
+        with api.env.adopt_roles(["Manager"]):
+            area = api.content.create(container=container, **area_payload)
+        # Objeto criado com uma descrição, logo exclude_from_nav deve ser False
+        assert area.exclude_from_nav is False
+
+        # Modificamos a descrição para uma string vazia
+        area.description = ""
+
+        # Teste de integração, disparamos o evento de modificação
+        # para que o subscriber seja executado
+        notify(ObjectModifiedEvent(area))
+
+        # Descrição modificada, o subscriber deve atualizar exclude_from_nav para True
+        assert area.exclude_from_nav is True
+
 
 class TestAreaFunctional:
     @pytest.fixture(autouse=True)

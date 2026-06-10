@@ -55,8 +55,9 @@ export const ClimaSchema = (props: BlockSchemaProps): any => {
       location: {
         title: intl.formatMessage(messages.location),
         description: intl.formatMessage(messages.locationHelp),
-        widget: 'text',
-        default: 'brasilia'
+        default: 'brasilia',
+        vocabulary: { '@id': 'v2tec.intranet.vocabulary.localidades' },
+        required: false,
       },
       measure: {
         title: intl.formatMessage(messages.measure),
